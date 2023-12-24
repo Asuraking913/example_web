@@ -1,14 +1,16 @@
-//DOM manipulation
+//Event listeners
 
-const ul = document.querySelector("ul");
+const button3 = document.getElementsByClassName("but3")[0];
+function alertButton() {
+  alert("This is what happens in the hood");
+}
 
-const new_div = document.createElement("li");
+button3.addEventListener("click", alertButton);
 
-new_div.innerText = "Asura";
+const box3 = document.querySelector(".but3");
 
-ul.append(new_div);
+function boxCont3() {
+  box3.style.backgroundColor = "rgb(39, 61, 94, 0.521)";
+}
 
-const li = document.querySelectorAll("li");
-
-console.log(ul.nextElementSibling);
-console.log(ul.previousElementSibling);
+button3.addEventListener("mouseover", boxCont3);
