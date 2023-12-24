@@ -10,5 +10,4 @@ ul.append(new_div);
 
 const li = document.querySelectorAll('li');
 
-// console.log(ul.parentNode);
-// console.log(ul.parentElement);
+console.log(ul.childNodes)
