@@ -6,41 +6,64 @@
 
 body {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(32, 53, 83);
-  gap: 3em;
+  min-height: 80vh;
+  background-image: url("../images/Make\ Your\ Day.jpeg");
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-}
-
-.but2 {
-  padding: 1em 2em;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: white;
-  background-color: rgba(32, 53, 83, 0.055);
-}
-
-.box {
-  width: 300px;
+.cont {
+  width: 50%;
   height: auto;
-  border: 4px solid white;
-  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.hidden {
-  display: none;
+.text-quote {
+  background-color: white;
+  height: auto;
+  width: 80%;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  font-size: 1.2rem;
+  font-family: serif;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-direction: column;
 }
 
-.hidden1 {
-  display: block;
+h1 {
+  font-family: sans-serif;
+  color: white;
+  background-color: rgb(27, 21, 21);
+  border: 2px solid white;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+  padding: 0.2em 0.5em;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: rgb(240, 46, 46);
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+}
+
+p.quote {
+  word-spacing: 0.2em;
+}
+
+button {
+  padding: 0.5em 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: rgb(27, 21, 21);
+  color: white;
 }
