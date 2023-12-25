@@ -5,39 +5,42 @@
 }
 
 body {
-  /* background-color: rgb(39, 61, 94); */
-  background-image: linear-gradient(rgb(39, 61, 94), rgb(39, 61, 94), white);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  gap: 4rem;
-}
-
-.but1,
-.but2,
-.but3 {
-  height: 300px;
-  width: 300px;
-  border: 5px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 2rem;
-  color: white;
-  font-size: 1.2em;
-  font-family: sans-serif;
-  font-weight: bold;
-  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(32, 53, 83);
+  gap: 3em;
 }
 
-button {
-  background-color: rgba(39, 61, 94, 0);
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.but2 {
   padding: 1em 2em;
-  border: 2px solid white;
   font-size: 1.2em;
   font-weight: bold;
   color: white;
-  border-radius: 1em;
+  background-color: rgba(32, 53, 83, 0.055);
+}
+
+.box {
+  width: 300px;
+  height: auto;
+  border: 4px solid white;
+  padding: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden1 {
+  display: block;
 }

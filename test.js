@@ -1,16 +1,13 @@
 //Event listeners
+const hiddenContent = document.querySelector(".hidden");
+const revealBtn = document.querySelector(".but2");
 
-const button3 = document.getElementsByClassName("but3")[0];
-function alertButton() {
-  alert("This is what happens in the hood");
+function revealContent() {
+  if (hiddenContent.classList.contains("hidden")) {
+    hiddenContent.classList.remove("hidden");
+  } else {
+    hiddenContent.classList.add("hidden");
+  }
 }
 
-button3.addEventListener("click", alertButton);
-
-const box3 = document.querySelector(".but3");
-
-function boxCont3() {
-  box3.style.backgroundColor = "rgb(39, 61, 94, 0.521)";
-}
-
-button3.addEventListener("mouseover", boxCont3);
+revealBtn.addEventListener("click", revealContent);
