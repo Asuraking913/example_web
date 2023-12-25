@@ -1,35 +1,36 @@
-const quote = [
-  {
-    quote: "The only thing we have to fear is fear itself.",
-    person: "- Franklin D. Roosevelt",
+window.addEventListener(
+  "click",
+  function () {
+    console.log("window");
   },
-  {
-    quote:
-      "In the end, we will remember not the words of our enemies, but the silence of our friends.",
-    person: -"- Martin Luther King Jr",
-  },
-  {
-    quote:
-      "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
-    person: "- Ralph Waldo Emerson",
-  },
-  {
-    quote: "The only impossible journey is the one you never begin.",
-    person: "- Tony Robbins",
-  },
-  {
-    quote:
-      "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    person: "- Nelson Mandela",
-  },
-];
+  false
+);
 
-let button = document.querySelector("button");
-let texQuote = document.querySelector(".quote");
-let author = document.querySelector("h3");
+document.addEventListener(
+  "click",
+  function () {
+    console.log("document");
+  },
+  true
+);
 
-button.addEventListener("click", function () {
-  let random = Math.floor(Math.random() * quote.length);
-  texQuote.innerText = quote[random].quote;
-  author.innerText = quote[random].person;
+document.querySelector(".cont1").addEventListener("click", function () {
+  console.log("cont1");
 });
+
+document.querySelector(".cont2").addEventListener(
+  "click",
+  function () {
+    console.log("cont2");
+  },
+  false
+);
+
+document.querySelector("button").addEventListener(
+  "click",
+  function (e) {
+    console.log("clicked");
+    e.target.innerText = "clicked";
+  },
+  false
+);
