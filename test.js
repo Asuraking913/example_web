@@ -1,16 +1,17 @@
-// document.querySelector(".sports").addEventListener("click", function (e) {
-//   const target = e.target;
-//   if (target.matches("li")) {
-//     target.style.backgroundColor = "red";
-//   }
-//   if (target.matches("ul")) {
-//     target.style.backgroundColor = "green";
-//   }
-// });
+const button = document.getElementById("open-btn");
+const closeBtn = document.querySelector(".close-btn");
+const modalCont = document.getElementById("modal-container");
 
-// const ul = document.querySelector("ul");
-// const newList = document.createElement("li");
-// newList.innerText = "Boxing";
-// newList.setAttribute("class", "boxing");
+button.addEventListener("click", function () {
+  modalCont.style.display = "block";
+});
 
-// ul.appendChild(newList);
+closeBtn.addEventListener("click", function () {
+  modalCont.style.display = "none";
+});
+
+window.addEventListener("click", function (e) {
+  if (e.target === modalCont) {
+    modalCont.style.display = "none";
+  }
+});
