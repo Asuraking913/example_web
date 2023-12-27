@@ -5,45 +5,57 @@
 }
 
 body {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   background-image: url(../images/mac.jpeg);
-  background-size: cover;
 }
 
 .cont1 {
-  height: auto;
   width: auto;
   background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   padding: 2em;
-  gap: 2em;
-  border-radius: 1em;
+  border-radius: 1.5em;
 }
 
 #timer {
   font-size: 2rem;
+  margin-bottom: 0.5em;
   font-weight: bold;
 }
 
-button {
-  font-size: 1.2rem;
+.cont2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+i {
   padding: 0.2em 0.5em;
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+i:first-child:active {
+  border: 1px solid #cecccc;
+  text-shadow: 0px 0px 1px #cecccc;
+}
+
+button {
+  border: none;
 }
 
 button:first-child {
-  color: darkgreen;
-  text-shadow: 0px 0px 2px black;
-  background-color: #333;
+  color: green;
+  text-shadow: 0px 0px 1px black;
+  font-size: 1.2em;
 }
 
 button:last-child {
-  color: darkred;
-  background-color: #333;
+  color: red;
   text-shadow: 0px 0px 2px black;
+  font-size: 1.2em;
 }
