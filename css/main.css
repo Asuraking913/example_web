@@ -5,63 +5,45 @@
 }
 
 body {
-  background-image: url(../images/mac.jpeg);
-  background-position: cover;
-  background-repeat: no-repeat;
-
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  background-image: url(../images/mac.jpeg);
+  background-size: cover;
 }
 
 .cont1 {
+  height: auto;
+  width: auto;
   background-color: white;
-  width: 65%;
-  padding: 2em 1em;
-  font-family: san;
-  border-radius: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2em;
+  gap: 2em;
+  border-radius: 1em;
 }
 
-h2 {
-  font-size: 1.2em;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-bottom: 0.7em;
-  text-align: center;
-}
-
-.question {
-  padding: 0.4em 0;
-  border-bottom: 2px solid black;
+#timer {
+  font-size: 2rem;
   font-weight: bold;
-  text-transform: capitalize;
-  cursor: pointer;
-
-  position: relative;
 }
 
-.question::after {
-  content: "+";
-  position: absolute;
-  right: 0;
+button {
+  font-size: 1.2rem;
+  padding: 0.2em 0.5em;
 }
 
-.cont1 .content-container .answer {
-  width: 100%;
-  padding-top: 0.5em;
-  line-height: 1.5;
-
-  height: 0px;
-  overflow: hidden;
-  transition: 0.5s;
+button:first-child {
+  color: darkgreen;
+  text-shadow: 0px 0px 2px black;
+  background-color: #333;
 }
 
-.cont1 .content-container.active .answer {
-  height: 150px;
-}
-
-.cont1 .content-container.active .question::after {
-  content: "-";
-  position: absolute;
-  right: 0;
+button:last-child {
+  color: darkred;
+  background-color: #333;
+  text-shadow: 0px 0px 2px black;
 }
