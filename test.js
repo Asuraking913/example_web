@@ -10,15 +10,18 @@ let seconds1 = 0;
 let minutes1 = 0;
 let hours1 = 0;
 
+let timeStatus = "stopped";
+
 function startInterval() {
   seconds++;
+
   if (seconds / 60 === 1) {
     seconds = 0;
-    minutes = 1;
+    minutes++;
 
     if (minutes / 60 === 1) {
       minutes = 0;
-      hours = 1;
+      hours++;
     }
   }
 
@@ -40,9 +43,25 @@ function startInterval() {
     hours1 = hours.toString();
   }
 
-  timer.innerText = hours + ":" + minutes + ":" + seconds;
+  timer.innerHTML = hours1 + ":" + minutes1 + ":" + seconds1;
 }
 
 playBtn.addEventListener("click", function () {
-  window.setInterval(startInterval, 10);
+  if (timeStatus === "stopped") {
+    timeInterval = window.setInterval(startInterval, 100);
+    playBtn.innerHTML = '<i class="fa-solid fa-play" id="play">⏸️</i>';
+  } else {
+    window.clearInterval(timeInterval);
+    timeStatus = "started";
+  }
+});
+
+stopBtn.addEventListener("click", function () {
+  // if (timeStatus === "started") {
+  window.clearInterval(timeInterval);
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  document.getElementById("timer").innerHTML = "00:00:00";
+  playBtn.innerHTML = '<i class="fa-solid fa-play" id="play">▶</i>';
 });
