@@ -1,17 +1,14 @@
-const button = document.getElementById("open-btn");
-const closeBtn = document.querySelector(".close-btn");
-const modalCont = document.getElementById("modal-container");
+const question = document.getElementsByClassName("content-container");
 
-button.addEventListener("click", function () {
-  modalCont.style.display = "block";
-});
+for (var i = 0; i < question.length; i++) {
+  question[i].addEventListener("click", function () {
+    console.log("sdf");
+    this.classList.toggle("active");
+  });
+}
 
-closeBtn.addEventListener("click", function () {
-  modalCont.style.display = "none";
-});
-
-window.addEventListener("click", function (e) {
-  if (e.target === modalCont) {
-    modalCont.style.display = "none";
-  }
-});
+// for (n in question) {
+//   question[n].addEventListener("click", function () {
+//     console.log("sdf");
+//   });
+// }
