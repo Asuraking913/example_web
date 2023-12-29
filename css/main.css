@@ -57,36 +57,20 @@ button#button i:hover {
 
 .cont3 {
   width: 350px;
-  padding: 1em;
+  height: 40px;
   background-color: white;
   border-radius: 0.5em;
-}
-
-.cont3 {
+  transition: 5s;
   margin-top: 0.5em;
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
+  list-style-type: none;
 }
 
-.cont3 p {
-  flex: 5;
+.cont3 li {
+  display: block;
+  width: 70%;
   font-size: 1.2em;
-  font-family: sans-serif;
 }
 
 .cont3 button {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.cont3 i {
-  margin-top: 0.1em;
-  font-size: 1.5rem;
-  color: red;
-}
-
-.cont3 i.fa-check {
-  color: green;
+  flex: 1;
 }
