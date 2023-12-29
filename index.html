@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quote Generator</title>
-
+    <link
+      rel="stylesheet"
+      href="/font-awesome/fontawesome-free-6.5.1-web/css/all.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="cont1">
-      <div id="timer">00:00:00</div>
+    <div class="cont1" id="container">
       <div class="cont2">
-        <button><i class="fa-solid fa-play" id="play">▶</i></button>
-        <button><i class="fa-solid fa-stop" id="stop">🔃</i></button>
+        <input type="text" id="text-input" class="button" />
+        <button id="button">
+          <i class="fa-solid fa-plus"></i>
+        </button>
       </div>
     </div>
   </body>

@@ -1,67 +1,33 @@
-const playBtn = document.getElementById("play");
-const stopBtn = document.getElementById("stop");
-const timer = document.getElementById("timer");
+const container = document.getElementById("container");
+const button = document.getElementById("button");
+const inputText = document.getElementById("text-input");
+const newDiv = document.getElementsByClassName("cont3");
 
-let seconds = 0;
-let minutes = 0;
-let hours = 0;
-
-let seconds1 = 0;
-let minutes1 = 0;
-let hours1 = 0;
-
-let timeStatus = "stopped";
-
-function startInterval() {
-  seconds++;
-
-  if (seconds / 60 === 1) {
-    seconds = 0;
-    minutes++;
-
-    if (minutes / 60 === 1) {
-      minutes = 0;
-      hours++;
-    }
-  }
-
-  if (seconds < 10) {
-    seconds1 = "0" + seconds.toString();
+button.addEventListener("click", function () {
+  if (inputText.value === "") {
+    alert("You did not input any value");
   } else {
-    seconds1 = seconds.toString();
-  }
+    let newCont = document.createElement("div");
+    newCont.classList.add("cont3");
+    let newText = document.createElement("p");
+    newText.innerText = inputText.value;
+    newCont.appendChild(newText);
+    let button1 = document.createElement("button");
+    let button2 = document.createElement("button");
+    let icon1 = document.createElement("i");
+    let icon2 = document.createElement("i");
+    icon1.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    icon2.innerHTML = '<i class="fa-solid fa-check"></i>';
+    button1.appendChild(icon1);
+    button2.appendChild(icon2);
+    newCont.appendChild(button1);
+    newCont.appendChild(button2);
 
-  if (minutes < 10) {
-    minutes1 = "0" + minutes.toString();
-  } else {
-    minutes1 = minutes.toString();
+    container.appendChild(newCont);
   }
-
-  if (hours < 10) {
-    hours1 = "0" + hours.toString();
-  } else {
-    hours1 = hours.toString();
-  }
-
-  timer.innerHTML = hours1 + ":" + minutes1 + ":" + seconds1;
-}
-
-playBtn.addEventListener("click", function () {
-  if (timeStatus === "stopped") {
-    timeInterval = window.setInterval(startInterval, 100);
-    playBtn.innerHTML = '<i class="fa-solid fa-play" id="play">⏸️</i>';
-  } else {
-    window.clearInterval(timeInterval);
-    timeStatus = "started";
-  }
+  inputText.value = "";
 });
 
-stopBtn.addEventListener("click", function () {
-  // if (timeStatus === "started") {
-  window.clearInterval(timeInterval);
-  seconds = 0;
-  minutes = 0;
-  hours = 0;
-  document.getElementById("timer").innerHTML = "00:00:00";
-  playBtn.innerHTML = '<i class="fa-solid fa-play" id="play">▶</i>';
-});
+// newDiv.addEventListener("click", function(e) {
+//     if
+// })
